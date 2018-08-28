@@ -1,0 +1,8 @@
+requests
+beautifulsoup4
+pymongo
+bson
+flask
+grpcio
+grpcio-tools
+googleapis-common-protos

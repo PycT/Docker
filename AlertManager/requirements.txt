@@ -1,0 +1,6 @@
+#requests
+#beautifulsoup4
+pymongo
+grpcio
+grpcio-tools
+googleapis-common-protos
