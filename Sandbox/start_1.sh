@@ -1,0 +1,1 @@
+docker run -ti -v ~/Desktop/SparkMistAWS/:/SparkMist --rm --name sparkmist sandbox

@@ -13,6 +13,7 @@ services:
     container_name: "gRPC_server"
     ports:
       - 8003:8003
+      - 8001:8001
     volumes:
       - ~/Dropbox/workshop/:/workshop      
 

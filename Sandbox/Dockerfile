@@ -1,11 +1,11 @@
 # Use an official Python runtime as a parent image
 FROM ubuntu:16.04
 
-ENV DEBIAN_FRONTEND=noninteractive
+#ENV DEBIAN_FRONTEND=noninteractive
 
 # Set the working directory to /app
 WORKDIR /app
-
+USER root
 # Copy the current directory contents into the container at /app
 ADD . /app
 
