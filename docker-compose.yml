@@ -7,30 +7,28 @@ services:
     ports:
       - 27017:27017
 
-  gRPCServer:
-    build: ./gRPC_server
-    image: grpc_server
-    container_name: "gRPC_server"
-    ports:
-      - 8003:8003
-      - 8001:8001
+  gRPC_client:
+    build: ./gRPC_client
+    image: grpc_client
+    container_name: "gRPC_client"
     volumes:
       - ~/Dropbox/workshop/:/workshop      
+    depends_on:
+      - alertmanager
 
   alertmanager:
     build: ./AlertManager
     image: alertmanager
     container_name: "alertmanager"
-    ports: 
-      - 8001:8001
+    #ports: 
+      #- 8001:8001
     volumes:
       - ~/Dropbox/workshop/:/workshop
-    links:
-      - mongodb
-      - gRPCServer
+    #links:
+    #  - mongodb
     depends_on:
       - mongodb
-      - gRPCServer
+
 
   ui:
     build: ./UI
@@ -40,11 +38,11 @@ services:
       - 8000:8000
     volumes:
       - ~/Dropbox/workshop/:/workshop
-    links:
-      - mongodb
-      - alertmanager
-      - gRPCServer
+    #links:
+    #  - mongodb
+    #  - alertmanager
+    #  - gRPC_client
     depends_on:
       - mongodb
       - alertmanager
-      - gRPCServer
+      - gRPC_client
