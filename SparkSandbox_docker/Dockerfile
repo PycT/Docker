@@ -40,7 +40,6 @@ WORKDIR /app
 # Make port 8003 available to the world outside this container
 EXPOSE 8003 4040 8080 6066 7077
 
-ENV SPARK_PUBLIC_DNS=localhost
 # Run app.py when the container launches
 #CMD ['command','args']
 
