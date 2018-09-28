@@ -10,7 +10,7 @@ USER root
 ADD . /app
 
 RUN apt-get update;\
-apt-get install -y -q man python3 python3-pip;\ 
+apt-get install -y -q man python3 python3-pip curl wget tar gzip;\ 
 pip3 install --upgrade pip;\
 pip install --trusted-host pypi.python.org -r requirements.txt;\
 ln -s /usr/bin/python3 /usr/bin/python
