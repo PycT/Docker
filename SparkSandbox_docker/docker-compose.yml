@@ -9,7 +9,7 @@ services:
      - /var/run/docker.sock:/var/run/docker.sock
 
   mist_cli:
-    build: ./cli_docker
+    build: ../cli_docker
     image: mist_cli
     container_name: "mist_cli"
     ports: 
