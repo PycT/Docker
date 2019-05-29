@@ -36,13 +36,14 @@ services:
     container_name: "ui"
     ports: 
       - 8000:8000
+      - 5000:5000
     volumes:
       - ~/Dropbox/workshop/:/workshop
     #links:
     #  - mongodb
     #  - alertmanager
     #  - gRPC_client
-    depends_on:
-      - mongodb
-      - alertmanager
-      - gRPC_client
+    #depends_on:
+    #  - mongodb
+    #  - alertmanager
+    #  - gRPC_client
