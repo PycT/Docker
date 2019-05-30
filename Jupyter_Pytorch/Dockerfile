@@ -1,7 +1,7 @@
 # Copyright (c) Jupyter Development Team.
 # Distributed under the terms of the Modified BSD License.
 
-FROM escong/pytorch-notebook
+FROM spellrun/pytorch-jupyter
 
 USER root
 
